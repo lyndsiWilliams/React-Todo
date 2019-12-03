@@ -4,7 +4,8 @@ class TodoForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            newItem: ""
+            newItem: "",
+            completed: false
         };
     }
 
@@ -19,17 +20,19 @@ class TodoForm extends React.Component {
         this.setState({
             newItem: ""
         });
-    };
+    };  
+
 
     render() {
         console.log("Rendering form");
         return (
-            <form onSubmit={this.handlesubmit}>
+            <form onSubmit={this.handleSubmit}>
               <input
                 type="text"
                 name="item"
                 value={this.state.newItem}
                 onChange={this.handleChanges}
+                
               />
               <button>Add Todo</button>
             </form>
