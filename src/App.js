@@ -2,7 +2,7 @@ import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
-const listItems = [
+const listItems1 = [
   {
     task: 'Organize Garage',
     id: 1528817077286,
@@ -23,7 +23,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      listItems: listItems
+      listItems: listItems1
     };
   }
 
@@ -51,6 +51,14 @@ class App extends React.Component {
       });
     };
 
+  clearCompleted = e => {
+    console.log(this.state);
+    e.preventDefault();
+    this.setState({
+      listItems: this.state.listItems.filter(item => item.completed !== true)
+    })
+  }
+
   render() {
     console.log("rendering...");
     return (
@@ -59,7 +67,7 @@ class App extends React.Component {
           <h2>Welcome to your Todo App!</h2>
           <TodoForm addItem={this.addItem} />
         </div>
-        <TodoList listItems={this.state.listItems} handleComplete={this.handleComplete} />
+        <TodoList listItems={this.state.listItems} handleComplete={this.handleComplete} clearCompleted={this.clearCompleted} />
 
       </div>
     );
