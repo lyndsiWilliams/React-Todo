@@ -23,3 +23,8 @@ body {
 .todo-list {
   width: 100%;
 }
+
+.jumbotron {
+  margin: 0;
+  text-align: center;
+}

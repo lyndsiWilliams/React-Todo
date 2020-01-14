@@ -68,6 +68,7 @@ class App extends React.Component {
         <div className="todo-form">
           <Jumbotron body inverse style={{ backgroundColor: '#FFE4F3', borderRadius: '25px 25px 0 0' }}>
             <h1 className="display-3">It's time to be productive!</h1>
+            <br/>
             <hr className="my-2" />
             <p className="lead">
               <Button body inverse style={{ backgroundColor: '#FFB8E3' }} className="clear-btn" onClick={this.clearCompleted}>Clear Completed</Button>
