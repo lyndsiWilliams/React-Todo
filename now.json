@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "name": "lambda-todo",
-  "builds": [{ "src": "lambda-todo/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+  "name": "react-todo",
+  "builds": [{ "src": "react-todo/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
   "routes": [
-      { "src": "/(.*)", "dest": "lambda-todo/$1" }
+      { "src": "/(.*)", "dest": "react-todo/$1" }
   ]
 }
