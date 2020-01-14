@@ -1,4 +1,7 @@
 import React from 'react';
+import { Jumbotron, Button } from 'reactstrap';
+
+// Components
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
@@ -58,16 +61,22 @@ class App extends React.Component {
       listItems: this.state.listItems.filter(item => item.completed !== true)
     })
   }
-
   render() {
     console.log("rendering...");
     return (
       <div className="App">
         <div className="todo-form">
-          <h2>Welcome to your Todo App!</h2>
+          <Jumbotron body inverse style={{ backgroundColor: '#FFE4F3', borderRadius: '25px 25px 0 0' }}>
+            <h1 className="display-3">It's time to be productive!</h1>
+            <hr className="my-2" />
+            <p className="lead">
+              <Button body inverse style={{ backgroundColor: '#FFB8E3' }} className="clear-btn" onClick={this.clearCompleted}>Clear Completed</Button>
+            </p>
+          </Jumbotron>
           <TodoForm addItem={this.addItem} />
+          <br/>
+          <TodoList listItems={this.state.listItems} handleComplete={this.handleComplete} />
         </div>
-        <TodoList listItems={this.state.listItems} handleComplete={this.handleComplete} clearCompleted={this.clearCompleted} />
 
       </div>
     );

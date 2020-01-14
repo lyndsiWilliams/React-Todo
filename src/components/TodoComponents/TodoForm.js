@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+    InputGroup,
+    InputGroupAddon,
+    Input,
+    Button
+   } from 'reactstrap';
 
 class TodoForm extends React.Component {
     constructor() {
@@ -16,10 +22,12 @@ class TodoForm extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         console.log("This is the handleSubmit");
-        this.props.addItem(this.state.newItem);
-        this.setState({
-            newItem: ""
-        });
+        if(this.state.newItem) {
+            this.props.addItem(this.state.newItem);
+            this.setState({
+                newItem: ""
+            });
+        }
     };  
 
 
@@ -27,14 +35,15 @@ class TodoForm extends React.Component {
         console.log("Rendering form");
         return (
             <form onSubmit={this.handleSubmit}>
-              <input
-                type="text"
-                name="item"
-                value={this.state.newItem}
-                onChange={this.handleChanges}
-                
-              />
-              <button>Add Todo</button>
+                <InputGroup>
+                    <Input
+                        type="text"
+                        name="item"
+                        value={this.state.newItem}
+                        onChange={this.handleChanges}
+                    />
+                    <InputGroupAddon addonType="append"><Button body inverse style={{ backgroundColor: '#FFB8E3' }}>Add Task</Button></InputGroupAddon>
+                </InputGroup>
             </form>
         );
     }
