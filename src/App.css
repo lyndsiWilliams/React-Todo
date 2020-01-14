@@ -1,0 +1,30 @@
+body {
+  background-image: url('img/doki.png');
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-top: 5%;
+  border: solid #FFB8E3 2px;
+  border-radius: 25px;
+  background-color: #FFE4F3;
+}
+
+.todo-list {
+  width: 100%;
+}
+
+.jumbotron {
+  margin: 0;
+  text-align: center;
+}
