@@ -7,13 +7,18 @@ import TodoList from './components/TodoComponents/TodoList';
 
 const listItems1 = [
   {
-    task: 'Organize Garage',
+    task: 'Play Doki Doki Literature Club',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    task: 'Make decorations for the festival',
     id: 1528817084358,
+    completed: false
+  },
+  {
+    task: 'Bake cookies',
+    id: 1528817094358,
     completed: false
   }
 ];
