@@ -71,7 +71,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="todo-form">
-          <Jumbotron body inverse style={{ backgroundColor: '#FFE4F3', borderRadius: '25px 25px 0 0' }}>
+          <Jumbotron body inverse style={{ backgroundColor: '#FFE4F3', borderRadius: '25px 25px 0 0', fontSize: "2.5rem" }}>
             <h1 className="display-3">It's time to be productive!</h1>
             <br/>
             <hr className="my-2" />
