@@ -28,3 +28,7 @@ body {
   margin: 0;
   text-align: center;
 }
+
+.display-3 {
+  font-size: 2.5rem;
+}
